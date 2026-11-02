@@ -79,3 +79,13 @@ llama bench -hf unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M -ngl 99,56 -r 3
 | `fit-params --fit-target 21504` (12 GB) | `-c 4096 -ngl 36` |
 | `llama bench` tg128, `-ngl 99` | 73.85 ± 0.19 tokens/s |
 | `llama bench` tg128, `-ngl 56` | 19.67 ± 5.80 tokens/s |
+
+## Raw logs
+
+`logs/` holds the recordings the readings above come from, unedited. The video replays them, sped up where it says so.
+
+- `terminal.cast`: the session the video replays, from `llama version` to the calculator, every command in order with
+  its output, in real time (the build ran beforehand). Play it with `asciinema play logs/terminal.cast`, or read it as
+  JSON lines.
+- `nvidia-smi.cast`: the second terminal, `nvidia-smi` printing memory in use once a second during the same session.
+- `ep01.log`: llama-server's log of the 32K load (`-lv 4`), the file the `grep` above reads.
