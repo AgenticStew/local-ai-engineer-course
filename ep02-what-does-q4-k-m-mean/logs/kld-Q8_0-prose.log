@@ -1,0 +1,328 @@
+0.01.322.444 I ggml_cuda_init: found 1 CUDA devices (Total VRAM: 32579 MiB):
+0.01.322.498 I   Device 0: NVIDIA GeForce RTX 5090, compute capability 12.0, VMM: yes, VRAM: 32579 MiB
+0.01.325.098 I cmn  common_fit_a: fitting params to device memory ...
+0.01.325.118 I cmn  common_fit_a: (for bugs during this step try to reproduce them with -fit off, or provide --verbose logs if the bug only occurs with -fit on)
+0.01.325.225 I common_params_fit_impl: getting device memory data for initial parameters:
+0.01.776.313 I common_memory_breakdown_print: | memory breakdown [MiB] | total    free     self   model   context   compute    unaccounted |
+0.01.776.337 I common_memory_breakdown_print: |   - CUDA0 (RTX 5090)   | 32579 = 30927 + (26679 = 25972 +     181 +     525) +      -25026 |
+0.01.776.337 I common_memory_breakdown_print: |   - Host               |                   1328 =  1288 +       0 +      40                |
+0.01.801.201 I common_params_fit_impl: projected to use 26679 MiB of device memory vs. 30927 MiB of free device memory
+0.01.801.224 I common_params_fit_impl: will leave 4247 >= 1024 MiB of free device memory, no changes needed
+0.01.801.241 I common_fit_params: successfully fit params to free device memory
+0.01.801.246 I common_fit_params: fitting params to free memory took 0.48 seconds
+0.01.832.954 I llama_model_loader: loaded meta data with 51 key-value pairs and 866 tensors from /home/agentic_works/.cache/huggingface/hub/models--unsloth--Qwen3.8-27B-GGUF/snapshots/4ca720788d1e01f1bff70c033e0d0028fd02e502/Qwen3.8-27B-Q8_0.gguf (version GGUF V3 (latest))
+0.01.833.041 I llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+0.01.833.045 I llama_model_loader: - kv   0:                       general.architecture str              = qwen35
+0.01.833.046 I llama_model_loader: - kv   1:                               general.type str              = model
+0.01.833.047 I llama_model_loader: - kv   2:                     general.sampling.top_k i32              = 20
+0.01.833.051 I llama_model_loader: - kv   3:                     general.sampling.top_p f32              = 0.950000
+0.01.833.051 I llama_model_loader: - kv   4:                      general.sampling.temp f32              = 1.000000
+0.01.833.052 I llama_model_loader: - kv   5:                               general.name str              = Qwen3.8-27B
+0.01.833.052 I llama_model_loader: - kv   6:                           general.basename str              = Qwen3.8-27B
+0.01.833.053 I llama_model_loader: - kv   7:                        general.description str              = Renewal of the beloved Qwen model, de...
+0.01.833.053 I llama_model_loader: - kv   8:                       general.quantized_by str              = Unsloth
+0.01.833.054 I llama_model_loader: - kv   9:                         general.size_label str              = 27B
+0.01.833.054 I llama_model_loader: - kv  10:                            general.license str              = apache-2.0
+0.01.833.054 I llama_model_loader: - kv  11:                           general.repo_url str              = https://huggingface.co/unsloth
+0.01.833.055 I llama_model_loader: - kv  12:                   general.base_model.count u32              = 1
+0.01.833.055 I llama_model_loader: - kv  13:                  general.base_model.0.name str              = Qwen3.8 27B
+0.01.833.056 I llama_model_loader: - kv  14:          general.base_model.0.organization str              = Qwen
+0.01.833.056 I llama_model_loader: - kv  15:              general.base_model.0.repo_url str              = https://huggingface.co/Qwen/Qwen3.8-27B
+0.01.833.058 I llama_model_loader: - kv  16:                               general.tags arr[str,1]       = ["unsloth"]
+0.01.833.058 I llama_model_loader: - kv  17:                         qwen35.block_count u32              = 65
+0.01.833.058 I llama_model_loader: - kv  18:                      qwen35.context_length u32              = 262144
+0.01.833.059 I llama_model_loader: - kv  19:                    qwen35.embedding_length u32              = 5120
+0.01.833.059 I llama_model_loader: - kv  20:                 qwen35.feed_forward_length u32              = 17408
+0.01.833.059 I llama_model_loader: - kv  21:                qwen35.attention.head_count u32              = 24
+0.01.833.059 I llama_model_loader: - kv  22:             qwen35.attention.head_count_kv u32              = 4
+0.01.833.060 I llama_model_loader: - kv  23:             qwen35.rope.dimension_sections arr[i32,4]       = [11, 11, 10, 0]
+0.01.833.061 I llama_model_loader: - kv  24:                      qwen35.rope.freq_base f32              = 10000000.000000
+0.01.833.062 I llama_model_loader: - kv  25:    qwen35.attention.layer_norm_rms_epsilon f32              = 0.000001
+0.01.833.062 I llama_model_loader: - kv  26:                qwen35.attention.key_length u32              = 256
+0.01.833.062 I llama_model_loader: - kv  27:              qwen35.attention.value_length u32              = 256
+0.01.833.063 I llama_model_loader: - kv  28:                qwen35.nextn_predict_layers u32              = 1
+0.01.833.063 I llama_model_loader: - kv  29:                     qwen35.ssm.conv_kernel u32              = 4
+0.01.833.063 I llama_model_loader: - kv  30:                      qwen35.ssm.state_size u32              = 128
+0.01.833.063 I llama_model_loader: - kv  31:                     qwen35.ssm.group_count u32              = 16
+0.01.833.064 I llama_model_loader: - kv  32:                  qwen35.ssm.time_step_rank u32              = 48
+0.01.833.064 I llama_model_loader: - kv  33:                      qwen35.ssm.inner_size u32              = 6144
+0.01.833.065 I llama_model_loader: - kv  34:             qwen35.full_attention_interval u32              = 4
+0.01.833.065 I llama_model_loader: - kv  35:                qwen35.rope.dimension_count u32              = 64
+0.01.833.065 I llama_model_loader: - kv  36:                       tokenizer.ggml.model str              = gpt2
+0.01.833.065 I llama_model_loader: - kv  37:                         tokenizer.ggml.pre str              = qwen35
+0.01.833.067 I llama_model_loader: - kv  38:                      tokenizer.ggml.tokens arr[str,248320]  = ["!", "\"", "#", "$", "%", "&", "'", ...
+0.01.833.068 I llama_model_loader: - kv  39:                  tokenizer.ggml.token_type arr[i32,248320]  = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+0.01.833.069 I llama_model_loader: - kv  40:                      tokenizer.ggml.merges arr[str,247587]  = ["Ġ Ġ", "ĠĠ ĠĠ", "i n", "Ġ t",...
+0.01.833.069 I llama_model_loader: - kv  41:                tokenizer.ggml.eos_token_id u32              = 248046
+0.01.833.069 I llama_model_loader: - kv  42:            tokenizer.ggml.padding_token_id u32              = 248055
+0.01.833.069 I llama_model_loader: - kv  43:                tokenizer.ggml.bos_token_id u32              = 248044
+0.01.833.069 I llama_model_loader: - kv  44:               general.quantization_version u32              = 2
+0.01.833.070 I llama_model_loader: - kv  45:                          general.file_type u32              = 7
+0.01.833.070 I llama_model_loader: - kv  46:                      quantize.imatrix.file str              = Qwen3.8-27B-GGUF/imatrix_unsloth.gguf
+0.01.833.070 I llama_model_loader: - kv  47:                   quantize.imatrix.dataset str              = unsloth_calibration_Qwen3.8-27B.txt
+0.01.833.070 I llama_model_loader: - kv  48:             quantize.imatrix.entries_count u32              = 496
+0.01.833.070 I llama_model_loader: - kv  49:              quantize.imatrix.chunks_count u32              = 45
+0.01.833.096 I llama_model_loader: - kv  50:                    tokenizer.chat_template str              = {%- set image_count = namespace(value...
+0.01.833.100 I llama_model_loader: - type  f32:  360 tensors
+0.01.833.100 I llama_model_loader: - type q8_0:  506 tensors
+0.01.833.102 I print_info: file format = GGUF V3 (latest)
+0.01.833.103 I print_info: file type   = Q8_0
+0.01.833.104 I print_info: file size   = 27.04 GiB (8.50 BPW) 
+0.01.833.343 I llama_prepare_model_devices: using device CUDA0 (NVIDIA GeForce RTX 5090) (0000:01:00.0) - 30927 MiB free
+0.01.896.859 I load: 0 unused tokens
+0.01.918.444 I load: printing all EOG tokens:
+0.01.918.466 I load:   - 248044 ('<|endoftext|>')
+0.01.918.467 I load:   - 248046 ('<|im_end|>')
+0.01.918.467 I load:   - 248063 ('<|fim_pad|>')
+0.01.918.467 I load:   - 248064 ('<|repo_name|>')
+0.01.918.467 I load:   - 248065 ('<|file_sep|>')
+0.01.918.715 I load: special tokens cache size = 33
+0.01.939.256 I load: token to piece cache size = 1.7581 MB
+0.01.939.293 I print_info: arch                  = qwen35
+0.01.939.293 I print_info: vocab_only            = 0
+0.01.939.294 I print_info: no_alloc              = 0
+0.01.939.294 I print_info: n_ctx_train           = 262144
+0.01.939.295 I print_info: n_embd_inp            = 5120
+0.01.939.295 I print_info: n_embd                = 5120
+0.01.939.295 I print_info: n_embd_out            = 5120
+0.01.939.295 I print_info: n_layer               = 64
+0.01.939.295 I print_info: n_layer_all           = 65
+0.01.939.305 I print_info: n_head                = 24
+0.01.939.306 I print_info: n_head_kv             = 4
+0.01.939.306 I print_info: n_rot                 = 64
+0.01.939.307 I print_info: n_swa                 = 0
+0.01.939.307 I print_info: is_swa_any            = 0
+0.01.939.307 I print_info: non_causal_type       = 0
+0.01.939.308 I print_info: n_embd_head_k         = 256
+0.01.939.308 I print_info: n_embd_head_v         = 256
+0.01.939.309 I print_info: n_gqa                 = 6
+0.01.939.310 I print_info: n_embd_k_gqa          = 1024
+0.01.939.311 I print_info: n_embd_v_gqa          = 1024
+0.01.939.312 I print_info: f_norm_eps            = 0.0e+00
+0.01.939.313 I print_info: f_norm_rms_eps        = 1.0e-06
+0.01.939.313 I print_info: f_clamp_kqv           = 0.0e+00
+0.01.939.313 I print_info: f_max_alibi_bias      = 0.0e+00
+0.01.939.313 I print_info: f_logit_scale         = 0.0e+00
+0.01.939.313 I print_info: f_attn_scale          = 0.0e+00
+0.01.939.314 I print_info: f_attn_value_scale    = 0.0000
+0.01.939.314 I print_info: n_ff                  = 17408
+0.01.939.315 I print_info: n_expert              = 0
+0.01.939.315 I print_info: n_expert_used         = 0
+0.01.939.315 I print_info: n_expert_groups       = 0
+0.01.939.315 I print_info: n_group_used          = 0
+0.01.939.315 I print_info: causal attn           = 1
+0.01.939.315 I print_info: pooling type          = -1
+0.01.939.316 I print_info: rope type             = 40
+0.01.939.316 I print_info: rope scaling          = linear
+0.01.939.317 I print_info: freq_base_train       = 10000000.0
+0.01.939.317 I print_info: freq_scale_train      = 1
+0.01.939.317 I print_info: n_ctx_orig_yarn       = 262144
+0.01.939.317 I print_info: rope_yarn_log_mul     = 0.0000
+0.01.939.317 I print_info: rope_finetuned        = unknown
+0.01.939.318 I print_info: mrope sections        = [11, 11, 10, 0]
+0.01.939.319 I print_info: ssm_d_conv            = 4
+0.01.939.320 I print_info: ssm_d_inner           = 6144
+0.01.939.320 I print_info: ssm_d_state           = 128
+0.01.939.320 I print_info: ssm_dt_rank           = 48
+0.01.939.320 I print_info: ssm_n_group           = 16
+0.01.939.320 I print_info: ssm_dt_b_c_rms        = 0
+0.01.939.321 I print_info: model type            = 27B
+0.01.939.322 I print_info: model params          = 27.32 B
+0.01.939.322 I print_info: general.name          = Qwen3.8-27B
+0.01.939.323 I print_info: vocab type            = BPE
+0.01.939.324 I print_info: n_vocab               = 248320
+0.01.939.324 I print_info: n_merges              = 247587
+0.01.939.324 I print_info: BOS token             = 248044 '<|endoftext|>'
+0.01.939.324 I print_info: EOS token             = 248046 '<|im_end|>'
+0.01.939.324 I print_info: EOT token             = 248046 '<|im_end|>'
+0.01.939.324 I print_info: PAD token             = 248055 '<|vision_pad|>'
+0.01.939.325 I print_info: LF token              = 198 'Ċ'
+0.01.939.325 I print_info: FIM PRE token         = 248060 '<|fim_prefix|>'
+0.01.939.325 I print_info: FIM SUF token         = 248062 '<|fim_suffix|>'
+0.01.939.325 I print_info: FIM MID token         = 248061 '<|fim_middle|>'
+0.01.939.325 I print_info: FIM PAD token         = 248063 '<|fim_pad|>'
+0.01.939.325 I print_info: FIM REP token         = 248064 '<|repo_name|>'
+0.01.939.325 I print_info: FIM SEP token         = 248065 '<|file_sep|>'
+0.01.939.325 I print_info: EOG token             = 248044 '<|endoftext|>'
+0.01.939.326 I print_info: EOG token             = 248046 '<|im_end|>'
+0.01.939.326 I print_info: EOG token             = 248063 '<|fim_pad|>'
+0.01.939.326 I print_info: EOG token             = 248064 '<|repo_name|>'
+0.01.939.326 I print_info: EOG token             = 248065 '<|file_sep|>'
+0.01.939.326 I print_info: max token length      = 256
+0.01.939.520 I load_tensors: loading model tensors, this can take a while... (load_mode = mmap)
+0.01.941.271 W model has unused tensor blk.64.attn_norm.weight (size = 20480 bytes) -- ignoring
+0.01.941.292 W model has unused tensor blk.64.post_attention_norm.weight (size = 20480 bytes) -- ignoring
+0.01.941.297 W model has unused tensor blk.64.attn_q.weight (size = 66846720 bytes) -- ignoring
+0.01.941.299 W model has unused tensor blk.64.attn_k.weight (size = 5570560 bytes) -- ignoring
+0.01.941.300 W model has unused tensor blk.64.attn_v.weight (size = 5570560 bytes) -- ignoring
+0.01.941.305 W model has unused tensor blk.64.attn_output.weight (size = 33423360 bytes) -- ignoring
+0.01.941.306 W model has unused tensor blk.64.attn_q_norm.weight (size = 1024 bytes) -- ignoring
+0.01.941.308 W model has unused tensor blk.64.attn_k_norm.weight (size = 1024 bytes) -- ignoring
+0.01.941.309 W model has unused tensor blk.64.ffn_gate.weight (size = 94699520 bytes) -- ignoring
+0.01.941.311 W model has unused tensor blk.64.ffn_down.weight (size = 94699520 bytes) -- ignoring
+0.01.941.312 W model has unused tensor blk.64.ffn_up.weight (size = 94699520 bytes) -- ignoring
+0.01.941.314 W model has unused tensor blk.64.nextn.eh_proj.weight (size = 55705600 bytes) -- ignoring
+0.01.941.315 W model has unused tensor blk.64.nextn.enorm.weight (size = 20480 bytes) -- ignoring
+0.01.941.317 W model has unused tensor blk.64.nextn.hnorm.weight (size = 20480 bytes) -- ignoring
+0.01.941.321 W model has unused tensor blk.64.nextn.shared_head_norm.weight (size = 20480 bytes) -- ignoring
+0.04.166.646 I load_tensors: offloading output layer to GPU
+0.04.166.669 I load_tensors: offloading 64 repeating layers to GPU
+0.04.166.669 I load_tensors: offloaded 66/66 layers to GPU
+0.04.166.674 I load_tensors:   CPU_Mapped model buffer size =  1288.28 MiB
+0.04.166.675 I load_tensors:        CUDA0 model buffer size = 25972.29 MiB
+.............................................................................................
+0.10.167.074 I cmn  common_init_: added <|endoftext|> logit bias = -inf
+0.10.167.128 I cmn  common_init_: added <|im_end|> logit bias = -inf
+0.10.167.129 I cmn  common_init_: added <|fim_pad|> logit bias = -inf
+0.10.167.130 I cmn  common_init_: added <|repo_name|> logit bias = -inf
+0.10.167.130 I cmn  common_init_: added <|file_sep|> logit bias = -inf
+0.10.167.466 I llama_context: constructing llama_context
+0.10.167.486 I llama_context: n_seq_max             = 1
+0.10.167.486 I llama_context: n_ctx                 = 512
+0.10.167.486 I llama_context: n_ctx_seq             = 512
+0.10.167.487 I llama_context: n_batch               = 512
+0.10.167.487 I llama_context: n_ubatch              = 512
+0.10.167.487 I llama_context: causal_attn           = 1
+0.10.167.488 I llama_context: flash_attn            = auto
+0.10.167.488 I llama_context: kv_unified            = false
+0.10.167.491 I llama_context: freq_base             = 10000000.0
+0.10.167.492 I llama_context: freq_scale            = 1
+0.10.167.492 I llama_context: n_rs_seq              = 0
+0.10.167.492 I llama_context: n_outputs_max         = 512
+0.10.167.493 I llama_context: n_outputs_max_per_seq = 1
+0.10.167.493 I llama_context: n_ctx_seq (512) < n_ctx_train (262144) -- the full capacity of the model will not be utilized
+0.10.169.467 I llama_context:  CUDA_Host  output buffer size =     0.95 MiB
+0.10.171.455 I llama_kv_cache:      CUDA0 KV buffer size =    32.00 MiB
+0.10.171.476 I llama_kv_cache: size =   32.00 MiB (   512 cells,  16 layers,  1/1 seqs), K (f16):   16.00 MiB, V (f16):   16.00 MiB
+0.10.171.478 I llama_kv_cache: n_rot_k = 0, n_embd_head_k_all = 256
+0.10.171.479 I llama_kv_cache: n_rot_v = 0, n_embd_head_k_all = 256
+0.10.178.249 I llama_memory_recurrent:      CUDA0 RS buffer size =   149.62 MiB
+0.10.178.271 I llama_memory_recurrent: size =  149.62 MiB (     1 cells,  64 layers,  1 seqs  0 rs_seq), R (f32):    5.62 MiB, S (f32):  144.00 MiB, P (f32):    0.00 MiB
+0.10.178.279 I sched_reserve: reserving ...
+0.10.186.606 I resolve_fused_ops: Flash Attention enabled
+0.10.186.625 I resolve_fused_ops: resolving fused DeepSeek V4 HC support:
+0.10.187.255 I resolve_fused_ops: fused DeepSeek V4 HC pre enabled
+0.10.187.854 I resolve_fused_ops: fused DeepSeek V4 HC comb enabled
+0.10.191.250 I resolve_fused_ops: fused DeepSeek V4 HC post enabled
+0.10.218.867 I sched_reserve:      CUDA0 compute buffer size =   525.52 MiB
+0.10.218.892 I sched_reserve:  CUDA_Host compute buffer size =    40.53 MiB
+0.10.218.894 I sched_reserve: graph: nodes = 3801, splits = 2, input objects = 4, input tensors = 10
+0.10.218.895 I sched_reserve: reserve took 40.62 ms, sched copies = 1
+0.10.218.951 I cmn          init: llama threadpool init, n_threads = 16
+0.10.219.075 I cmn  common_init_: warming up the model with an empty run - please wait ... (--no-warmup to disable)
+0.10.413.273 I 
+0.10.413.416 I system_info: n_threads = 16 (n_threads_batch = 16) / 32 | CUDA : ARCHS = 1200 | USE_GRAPHS = 1 | FA_QUANTS = q4_0-q4_0,q8_0-q8_0,f16-f16,bf16-bf16 | BLACKWELL_NATIVE_FP4 = 1 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX_VNNI = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | BMI2 = 1 | AVX512 = 1 | AVX512_VBMI = 1 | AVX512_VNNI = 1 | AVX512_BF16 = 1 | LLAMAFILE = 1 | OPENMP = 1 | REPACK = 1 | 
+0.10.502.317 I kl_divergence: computing over 60 chunks, n_ctx=512, batch_size=512, n_seq=1
+0.10.881.366 I kl_divergence: 0.38 seconds per pass - ETA 0.37 minutes
+
+chunk             PPL               ln(PPL(Q)/PPL(base))          KL Divergence              Δp RMS            Same top p
+   1       4.2925 ±    0.6110      -0.00080 ±    0.00216       0.00047 ±    0.00007     0.558 ±  0.065 %    97.647 ±  0.951 %
+   2       6.0539 ±    0.7221       0.00054 ±    0.00330       0.00050 ±    0.00004     0.571 ±  0.048 %    98.431 ±  0.551 %
+   3       5.8351 ±    0.5575       0.00099 ±    0.00247       0.00070 ±    0.00006     0.676 ±  0.041 %    98.562 ±  0.431 %
+   4       5.7921 ±    0.4527       0.00162 ±    0.00195       0.00068 ±    0.00006     0.736 ±  0.086 %    98.627 ±  0.364 %
+   5       5.7868 ±    0.3913       0.00148 ±    0.00162       0.00065 ±    0.00005     0.713 ±  0.073 %    98.667 ±  0.321 %
+   6       6.0111 ±    0.3706       0.00074 ±    0.00140       0.00065 ±    0.00004     0.704 ±  0.062 %    98.431 ±  0.318 %
+   7       6.1612 ±    0.3496       0.00178 ±    0.00130       0.00067 ±    0.00004     0.722 ±  0.059 %    98.375 ±  0.299 %
+   8       6.6208 ±    0.3602       0.00159 ±    0.00117       0.00064 ±    0.00003     0.708 ±  0.053 %    98.186 ±  0.296 %
+   9       6.9999 ±    0.3630       0.00134 ±    0.00106       0.00062 ±    0.00003     0.681 ±  0.049 %    98.126 ±  0.283 %
+  10       7.3568 ±    0.3614       0.00151 ±    0.00098       0.00059 ±    0.00003     0.663 ±  0.046 %    98.314 ±  0.255 %
+  11       7.2394 ±    0.3354       0.00155 ±    0.00090       0.00058 ±    0.00002     0.648 ±  0.043 %    98.360 ±  0.240 %
+  12       7.2953 ±    0.3249       0.00194 ±    0.00086       0.00060 ±    0.00003     0.699 ±  0.051 %    98.333 ±  0.231 %
+  13       7.6209 ±    0.3302       0.00143 ±    0.00082       0.00059 ±    0.00002     0.684 ±  0.049 %    98.250 ±  0.228 %
+  14       7.2378 ±    0.3000       0.00128 ±    0.00077       0.00058 ±    0.00002     0.679 ±  0.046 %    98.347 ±  0.213 %
+  15       7.2076 ±    0.2882       0.00123 ±    0.00074       0.00060 ±    0.00002     0.722 ±  0.052 %    98.248 ±  0.212 %
+  16       7.3931 ±    0.2909       0.00133 ±    0.00075       0.00065 ±    0.00004     0.775 ±  0.066 %    98.260 ±  0.205 %
+  17       6.9817 ±    0.2638       0.00139 ±    0.00072       0.00063 ±    0.00004     0.771 ±  0.063 %    98.293 ±  0.197 %
+  18       7.0695 ±    0.2602       0.00152 ±    0.00070       0.00065 ±    0.00004     0.771 ±  0.060 %    98.366 ±  0.187 %
+  19       6.9985 ±    0.2512       0.00129 ±    0.00067       0.00065 ±    0.00004     0.767 ±  0.057 %    98.390 ±  0.181 %
+  20       6.9389 ±    0.2414       0.00128 ±    0.00065       0.00065 ±    0.00004     0.763 ±  0.055 %    98.451 ±  0.173 %
+  21       6.6969 ±    0.2261       0.00142 ±    0.00064       0.00067 ±    0.00004     0.785 ±  0.053 %    98.525 ±  0.165 %
+  22       6.6080 ±    0.2176       0.00152 ±    0.00062       0.00067 ±    0.00004     0.780 ±  0.051 %    98.592 ±  0.157 %
+  23       6.3806 ±    0.2041       0.00145 ±    0.00062       0.00075 ±    0.00006     0.886 ±  0.111 %    98.585 ±  0.154 %
+  24       6.0890 ±    0.1888       0.00149 ±    0.00060       0.00074 ±    0.00006     0.876 ±  0.107 %    98.578 ±  0.151 %
+  25       5.9749 ±    0.1817       0.00150 ±    0.00059       0.00074 ±    0.00006     0.881 ±  0.103 %    98.604 ±  0.147 %
+  26       5.8391 ±    0.1728       0.00143 ±    0.00057       0.00075 ±    0.00006     0.885 ±  0.099 %    98.597 ±  0.144 %
+  27       5.7423 ±    0.1660       0.00138 ±    0.00056       0.00076 ±    0.00006     0.892 ±  0.095 %    98.562 ±  0.143 %
+  28       5.6620 ±    0.1600       0.00142 ±    0.00055       0.00075 ±    0.00005     0.883 ±  0.092 %    98.613 ±  0.138 %
+  29       5.6581 ±    0.1570       0.00145 ±    0.00054       0.00078 ±    0.00006     0.877 ±  0.090 %    98.621 ±  0.136 %
+  30       5.6325 ±    0.1531       0.00137 ±    0.00053       0.00077 ±    0.00006     0.869 ±  0.087 %    98.614 ±  0.134 %
+  31       5.5843 ±    0.1488       0.00140 ±    0.00053       0.00082 ±    0.00006     0.897 ±  0.084 %    98.596 ±  0.132 %
+  32       5.5952 ±    0.1470       0.00154 ±    0.00053       0.00095 ±    0.00011     1.088 ±  0.163 %    98.542 ±  0.133 %
+  33       5.5661 ±    0.1438       0.00155 ±    0.00052       0.00096 ±    0.00011     1.087 ±  0.159 %    98.515 ±  0.132 %
+  34       5.6112 ±    0.1431       0.00146 ±    0.00051       0.00095 ±    0.00010     1.078 ±  0.155 %    98.501 ±  0.131 %
+  35       5.6788 ±    0.1429       0.00149 ±    0.00050       0.00094 ±    0.00010     1.068 ±  0.152 %    98.510 ±  0.128 %
+  36       5.8062 ±    0.1446       0.00148 ±    0.00050       0.00094 ±    0.00010     1.057 ±  0.149 %    98.486 ±  0.127 %
+  37       5.8914 ±    0.1448       0.00162 ±    0.00049       0.00093 ±    0.00010     1.049 ±  0.147 %    98.495 ±  0.125 %
+  38       5.8815 ±    0.1425       0.00160 ±    0.00048       0.00092 ±    0.00009     1.038 ±  0.144 %    98.524 ±  0.123 %
+  39       5.8907 ±    0.1410       0.00150 ±    0.00047       0.00090 ±    0.00009     1.028 ±  0.142 %    98.522 ±  0.121 %
+  40       5.9320 ±    0.1409       0.00171 ±    0.00056       0.00091 ±    0.00009     1.022 ±  0.139 %    98.549 ±  0.118 %
+  41       5.9477 ±    0.1395       0.00178 ±    0.00055       0.00090 ±    0.00009     1.014 ±  0.137 %    98.546 ±  0.117 %
+  42       6.0072 ±    0.1394       0.00182 ±    0.00054       0.00090 ±    0.00009     1.004 ±  0.135 %    98.562 ±  0.115 %
+  43       6.0087 ±    0.1379       0.00178 ±    0.00053       0.00089 ±    0.00008     1.000 ±  0.132 %    98.577 ±  0.113 %
+  44       5.9990 ±    0.1360       0.00169 ±    0.00054       0.00091 ±    0.00008     0.999 ±  0.130 %    98.592 ±  0.111 %
+  45       6.0700 ±    0.1366       0.00172 ±    0.00053       0.00090 ±    0.00008     0.991 ±  0.128 %    98.597 ±  0.110 %
+  46       6.0347 ±    0.1340       0.00165 ±    0.00052       0.00089 ±    0.00008     0.985 ±  0.126 %    98.610 ±  0.108 %
+  47       6.1395 ±    0.1355       0.00179 ±    0.00052       0.00090 ±    0.00008     0.980 ±  0.124 %    98.582 ±  0.108 %
+  48       6.1978 ±    0.1356       0.00178 ±    0.00051       0.00089 ±    0.00008     0.972 ±  0.122 %    98.611 ±  0.106 %
+  49       6.1512 ±    0.1329       0.00175 ±    0.00050       0.00088 ±    0.00008     0.966 ±  0.120 %    98.615 ±  0.105 %
+  50       6.1909 ±    0.1325       0.00176 ±    0.00050       0.00087 ±    0.00007     0.961 ±  0.118 %    98.635 ±  0.103 %
+  51       6.1991 ±    0.1312       0.00160 ±    0.00050       0.00091 ±    0.00007     0.975 ±  0.115 %    98.639 ±  0.102 %
+  52       6.2345 ±    0.1310       0.00162 ±    0.00050       0.00090 ±    0.00007     0.970 ±  0.113 %    98.635 ±  0.101 %
+  53       6.2750 ±    0.1306       0.00161 ±    0.00049       0.00091 ±    0.00007     0.969 ±  0.111 %    98.653 ±  0.099 %
+  54       6.2990 ±    0.1298       0.00156 ±    0.00049       0.00090 ±    0.00007     0.963 ±  0.110 %    98.671 ±  0.098 %
+  55       6.2972 ±    0.1286       0.00156 ±    0.00048       0.00091 ±    0.00007     0.960 ±  0.108 %    98.681 ±  0.096 %
+  56       6.3134 ±    0.1278       0.00161 ±    0.00047       0.00090 ±    0.00007     0.955 ±  0.107 %    98.683 ±  0.095 %
+  57       6.3331 ±    0.1271       0.00153 ±    0.00047       0.00090 ±    0.00007     0.950 ±  0.106 %    98.700 ±  0.094 %
+  58       6.3316 ±    0.1258       0.00156 ±    0.00046       0.00089 ±    0.00007     0.945 ±  0.104 %    98.709 ±  0.093 %
+  59       6.3302 ±    0.1246       0.00147 ±    0.00046       0.00089 ±    0.00007     0.941 ±  0.103 %    98.711 ±  0.092 %
+  60       6.3603 ±    0.1244       0.00145 ±    0.00045       0.00088 ±    0.00006     0.939 ±  0.101 %    98.712 ±  0.091 %
+
+====== Perplexity statistics ======
+Mean PPL(Q)                   :   6.360336 ±   0.124357
+Mean PPL(base)                :   6.351134 ±   0.124029
+Cor(ln(PPL(Q)), ln(PPL(base))):  99.97%
+Mean ln(PPL(Q)/PPL(base))     :   0.001448 ±   0.000451
+Mean PPL(Q)/PPL(base)         :   1.001449 ±   0.000451
+Mean PPL(Q)-PPL(base)         :   0.009202 ±   0.002879
+
+====== KL divergence statistics ======
+Mean    KLD:   0.000884 ±   0.000064
+Maximum KLD:   0.728728
+99.9%   KLD:   0.051312
+99.0%   KLD:   0.006494
+95.0%   KLD:   0.002301
+90.0%   KLD:   0.001440
+Median  KLD:   0.000320
+10.0%   KLD:   0.000007
+ 5.0%   KLD:   0.000001
+ 1.0%   KLD:  -0.000001
+ 0.1%   KLD:  -0.000009
+Minimum KLD:  -0.000038
+
+====== Token probability statistics ======
+Mean    Δp: -0.025 ± 0.008 %
+Maximum Δp: 13.625%
+99.9%   Δp:  5.009%
+99.0%   Δp:  2.046%
+95.0%   Δp:  0.968%
+90.0%   Δp:  0.552%
+75.0%   Δp:  0.114%
+Median  Δp: -0.000%
+25.0%   Δp: -0.130%
+10.0%   Δp: -0.621%
+ 5.0%   Δp: -1.029%
+ 1.0%   Δp: -2.315%
+ 0.1%   Δp: -5.763%
+Minimum Δp: -50.862%
+RMS Δp    :  0.939 ± 0.101 %
+Same top p: 98.712 ± 0.091 %
+
+0.18.485.596 I llama_perf_context_print:        load time =    8579.85 ms
+0.18.485.598 I llama_perf_context_print: prompt eval time =    6727.70 ms / 30720 tokens (    0.22 ms per token,  4566.19 tokens per second)
+0.18.485.598 I llama_perf_context_print:        eval time =       0.00 ms /     1 runs   (    0.00 ms per token,      inf tokens per second)
+0.18.485.599 I llama_perf_context_print:       total time =    8072.37 ms / 30721 tokens
+0.18.485.599 I llama_perf_context_print:    graphs reused =         59
+0.18.485.599 I llama_perf_context_print:   graph reallocs =          0    /     0        (same size) / (changed size)
+0.18.485.780 I common_memory_breakdown_print: | memory breakdown [MiB] | total   free     self   model   context   compute    unaccounted |
+0.18.485.795 I common_memory_breakdown_print: |   - CUDA0 (RTX 5090)   | 32579 = 3293 + (26679 = 25972 +     181 +     525) +        2606 |
+0.18.485.795 I common_memory_breakdown_print: |   - Host               |                  1328 =  1288 +       0 +      40                |

@@ -1,0 +1,1 @@
+Write a Python function merge_intervals(intervals) that takes a list of [start, end] pairs and returns them merged so that none overlap, sorted by start. Reply with only the code.
